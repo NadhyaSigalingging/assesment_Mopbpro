@@ -2,12 +2,11 @@ package com.nadhya0065.zodiapp.navigation
 
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
+import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import com.nadhya0065.zodiapp.AboutScreen
-import com.nadhya0065.zodiapp.HomeScreen
-import com.nadhya0065.zodiapp.ResultScreen
-import com.nadhya0065.zodiapp.ZodiacScreen
+import androidx.navigation.navArgument
+import com.nadhya0065.zodiapp.*
 
 @Composable
 fun NavGraph(navController: NavHostController) {
@@ -21,7 +20,16 @@ fun NavGraph(navController: NavHostController) {
         composable(Screen.Zodiac.route) {
             ZodiacScreen(navController)
         }
-        composable(Screen.Result.route) { backStackEntry ->
+        composable(
+            route = "result?name={name}&gender={gender}&day={day}&month={month}&year={year}",
+            arguments = listOf(
+                navArgument("name") { type = NavType.StringType; defaultValue = "" },
+                navArgument("gender") { type = NavType.StringType; defaultValue = "" },
+                navArgument("day") { type = NavType.StringType; defaultValue = "" },
+                navArgument("month") { type = NavType.StringType; defaultValue = "" },
+                navArgument("year") { type = NavType.StringType; defaultValue = "" },
+            )
+        ) { backStackEntry ->
             val name = backStackEntry.arguments?.getString("name") ?: ""
             val gender = backStackEntry.arguments?.getString("gender") ?: ""
             val day = backStackEntry.arguments?.getString("day") ?: ""
@@ -37,8 +45,6 @@ fun NavGraph(navController: NavHostController) {
                 navController = navController
             )
         }
-
-
         composable(Screen.About.route) {
             AboutScreen(navController)
         }
