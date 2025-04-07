@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">ZodiApp</string>
+    <string name="back">Kembali</string>
+    <string name="name_placeholder">Nama lengkap</string>
+    <string name="gender">Jenis Kelamin</string>
+    <string name="male">Laki-laki</string>
+    <string name="female">Perempuan</string>
+    <string name="day">Tanggal Lahir</string>
+    <string name="month">Bulan Lahir</string>
+    <string name="year">Tahun Lahir</string>
+    <string name="see_zodiac">Lihat Zodiak</string>
+    <string name="your_zodiac">Zodiak kamu</string>
+    <string name="your_zodiac_name">Zodiak kamu adalah: %1$s</string>
+    <string name="result_title">Hasil Zodiak</string>
+    <string name="full_name">%1$s</string>
+    <string name="birth_date">Tanggal Lahir: %1$s</string>
+    <string name="birth_gender">Jenis kelamin: %1$s</string>
+    <string name="share">Bagikan</string>
+    <string name="share_text">%1$s\nZodiak: %2$s\n%3$s</string>
+    <string name="about_app">Tentang Aplikasi</string>
+    <string name="settings">Pengaturan</string>
+    <string name="invalid_input">Input tidak valid</string>
+    <string name="invalid_year">Tahun yang dimasukkan tidak boleh lebih dari tahun saat ini</string>
+    <string name="start">Mulai</string>
+</resources>
